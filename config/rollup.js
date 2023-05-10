@@ -25,6 +25,16 @@ function getCompiler (opt) {
         }
       ]
     ],
+    plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          "corejs": 2,
+          'helpers': false,
+          'regenerator': false
+        }
+      ]
+    ],
     exclude: 'node_modules/**'
   })
 }
