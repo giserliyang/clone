@@ -1,4 +1,6 @@
-function clone (source) {
+const type = require('./type')
+
+module.exports = function clone (source) {
   const t = type(source)
   if (t !== 'object' && t !== 'array') {
     return source
