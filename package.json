@@ -2,8 +2,14 @@
   "name": "clone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "jsnext": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
   "scripts": {
+    "build:self": "rollup -c config/rollup.config.js",
+    "build:esm": "rollup -c config/rollup.config.esm.js",
+    "build:aio": "rollup -c config/rollup.config.aio.js",
+    "build": "npm run build:self && npm run build:esm && npm run build:aio",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/giserliyang/clone/issues"
   },
-  "homepage": "https://github.com/giserliyang/clone#readme"
+  "homepage": "https://github.com/giserliyang/clone#readme",
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-node-resolve": "^3.0.3"
+  }
 }
