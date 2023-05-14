@@ -1,4 +1,5 @@
 var expect = require('expect.js')
+// var clone = require("../dist/index.js")
 var clone = require("../src/index.js")
 
 describe('function clone', function () {
