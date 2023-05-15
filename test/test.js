@@ -1,6 +1,6 @@
 var expect = require('expect.js')
 // var clone = require("../dist/index.js")
-var clone = require("../src/index.js")
+var clone = require("../src/index.js").clone // 垫子。在window下
 
 describe('function clone', function () {
   describe('param data', function () {
